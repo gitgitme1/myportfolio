@@ -1,0 +1,769 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: "Lucida Grande";
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: left;
+}
+
+.rock-text {
+  font-size: 60px;
+  font-weight: bold;
+  background: url(https://i.imgur.com/y2D12Re.png); /* your rock texture */
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent; /* important for WebKit browsers */
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.top-wrapper {
+  padding: %;
+  background-repeat: no-repeat;
+  background-image: url(https://i.imgur.com/TXJcd4m.jpeg);
+  background-size: 28% 97%;
+  background-position: center center;
+  background-color: darkorange;
+  background-attachment: fixed;
+  overflow: hidden;
+  color: ;
+
+  text-align: ;
+  z-index: ;
+}
+
+.top-wrapper h5 {
+  opacity: 0.9;
+  font-size: 55px;
+  letter-spacing: 5px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: darkorange;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.top-wrapper h3 {
+  opacity: 0.9;
+  font-size: 45px;
+  letter-spacing: 5px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.top-wrapper p {
+  opacity: 0.7;
+  margin-bottom: 3px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px rgba(225, 225, 225, 0.5);
+}
+.top-wrapper h5,
+.top-wrapper h3,
+.top-wrapper p {
+  position: relative;
+  transform: translate(-0.25%, -2%);
+}
+
+.fade-down-on-load {
+  opacity: 0;
+  transform: translateY(-100px); /* start above screen */
+  animation: fallDown 1s ease-out forwards;
+  animation-delay: 2s; /* ⏱️ wait 2 seconds */
+}
+
+@keyframes fallDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+p {
+  font-size: 15px; /* default is around 16px */
+}
+
+.section-wrapper {
+  text-align: center;
+
+  top: 900px;
+  left: 300px;
+}
+
+.profile-img {
+  width: 100px;
+  border-radius: ;
+  display: block;
+  margin: 30px auto;
+  position: relative;
+  transform: translate(-660%, -435%); /* ⬅️ Move left and up */
+  z-index: 6;
+}
+
+
+
+/* Delay intro text slightly so it follows the image */
+
+
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.intro-box {
+  position: absolute;
+  top: 100px;
+  left: 51px;
+  background-color: rgba(0, 0, 0, 0.7); /* black with 70% opacity */
+  padding: 20px 20px;
+  max-width: 35%;
+  margin: px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  text-align: auto;
+  color: white; /* make text readable on black */
+  z-index: 0;
+}
+
+.typing-text {
+  font-size: 0, 9rem;
+}
+
+/* Container styling */
+.about-section {
+  max-width: 600px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+}
+
+/* Wraps the whole About Me section */
+.about-container {
+}
+
+/* Title animation: LEFT to RIGHT */
+.about-title {
+  position: absolute;
+  top: 270px;
+  left: 150px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5f5d60;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 1s ease-out forwards;
+  animation-delay: 0.2s; /* Optional delay */
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+* ▼ Content (initially hidden) */ .about-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: max-height 1s ease, opacity 0.8s ease, padding 0.5s ease;
+  margin-top: 20px;
+}
+
+/* 📜 Shown state */
+.about-content.expanded {
+  max-height: 500px; /* Or 70vh if you want screen-based size */
+  opacity: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Optional custom scrollbar */
+.about-content.expanded::-webkit-scrollbar {
+  width: 6px;
+}
+
+.about-content.expanded::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 4px;
+}
+
+.section-box {
+  background-color: ;
+}
+
+/* Inner content */
+.content-wrapper {
+  padding-top: 100px;
+  color: white;
+}
+
+/* About Me animation */
+.about-content {
+  position: absolute;
+  max-width: 500px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background: rgba(0, 0, 0, 0);
+  /* ✅ REMOVE this line or change it */
+  /* transform: translate(-25%, -127%); */
+  border-radius: 12px;
+  color: white;
+  padding: 0 15px; /* set to 0 so it won’t show while collapsed */
+  transform: translateX(7%);
+  margin-top: -540px;
+}
+
+.about-content.show {
+  max-height: 700px;
+  padding: 15px;
+}
+
+.skills-wrapper {
+  position: absolute; /* or fixed if you want it to follow scroll */
+  top: 60px; /* space from the top */
+  right: 60px; /* space from the right */
+  width: 280px;
+  z-index: 10;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: ;
+}
+
+.btn {
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/* Skills toggle button */
+.btn.message {
+  display: inline-block;
+  background: ;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 60px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  transform: translate(-190px, 60px);#
+}
+
+.projects-container hr {
+  height: 2px;
+  background-color: #b3aeb5;
+  border: none;
+  margin: 20px auto;
+  width: 60%;
+}
+
+
+.projects-container p {
+  color: #b3aeb5;
+}
+.projects-container {
+  position: relative;
+  text-align: center;
+  transform: translate(50px, 370px);
+  color: darkorange;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+hr {
+  border: none;
+  height: 2px; /* thickness */
+  background-color: #333; /* color */
+  margin: 20px 6; /* space around */
+  width: 70%; /* full width */
+}
+
+/* Hidden content */
+.skills-content {
+  /* ✅ layout & positioning */
+  transform: translate(-260px, 60px); /* Move slightly left and down */
+  transition: transform 0.4s ease, max-height 0.5s ease, opacity 0.5s ease,
+    padding 0.4s ease;
+
+  /* ✅ layout & styling */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0); /* transparent black */
+  margin-top: 10px;
+  border-radius: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0); /* no visible shadow initially */
+}
+
+.skills-content.show {
+  display: flex;
+  flex-direction: column; /* ✅ Make content stack */
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  max-height: 300px; /* ✅ Allow full content to show */
+  opacity: 1;
+  padding: 15px;
+  overflow-y: auto; /* ✅ Scroll only if too tall */
+  scroll-behavior: smooth;
+}
+
+/* Skill tag boxes */
+.skills-container .tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.skills-container .tag:hover {
+  background: #e0e0e0;
+}
+
+.skills-banner {
+  width: 150%;
+  max-width: 230px; /* or any size you prefer */
+  position: absolute;
+  top: 50px;
+  left: -100px;
+  display: block;
+  margin: 0 auto 15px; /* center + space below */
+  border-radius: 30px; /* optional: rounded edges */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7); /* optional shadow */
+}
+
+.section-box {
+  max-width: 400px;
+  width: 40%;
+  margin: 1rem;
+  padding: 1.3rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 90px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(4px); /* optional, gives glassy look */
+}
+
+.section-box h2,
+p {
+  color: white;
+}
+
+.tag {
+  backdrop-filter: blur(4px);
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 10px 10px;
+  border-radius: 25px;
+  margin: 20px;
+  font-size: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.9);
+  position: auto;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  height: 50px; /* or adjust to your preferred height */
+  object-fit: contain;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Add CSS for menu-icon */
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  display: none;
+}
+
+.lesson {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+
+.lesson-wrapper {
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.heading {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  color: #5f5d60;
+}
+
+.heading h2 {
+  font-weight: normal;
+}
+
+.lesson-wrapper {
+  min-height: 100vh; /* Makes sure it's at least the full height of the screen */
+}
+
+.lesson-wrapper {
+  min-height: 120vh; /* Taller than screen to show more of the background */
+}
+
+.lesson-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 200px;              /* adds spacing between videos */
+  flex-wrap: wrap;        /* allow wrapping on small screens */
+  padding-bottom: 1100px;  /* space above footer */
+}
+
+.lesson-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;              /* ⬅️ Gap between videos */
+  padding: 40px 20px;
+}
+
+.video-wrapper {
+  width: 300px;           /* Or whatever size you want */
+  text-align: center;
+}
+
+
+.lesson-wrapper {
+  background-image: url('https://i.imgur.com/RsPaY1x.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+}
+
+
+.video-row {
+  display: flex;
+  justify-content: center;  /* center the row */
+  gap: 30px;                /* spacing between videos */
+  flex-wrap: wrap;          /* allow wrap on smaller screens */
+  margin-top: 40px;
+}
+
+.video-wrapper {
+  width: 300px;             /* or adjust */
+  text-align: center;
+}
+
+.video-preview-box {
+  width: 100%;
+  max-width: 40px;    /* adjust this as needed */
+  height: 275px;       /* 16:9 ratio for a horizontal look */
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.video-preview-box .text-contents {
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.lesson-video-container {
+  border-radius: px;
+  overflow: hidden;
+  box-shadow: 0 0 15px black;  /* Glow effect */
+  width: 30%;
+  max-width: 480px;
+  height: 160px;
+  margin: 20px auto;
+}
+
+
+
+
+
+
+.lesson {
+  float: left;
+  width: 25%;
+}
+
+.lesson-icon {
+  position: relative;
+}
+
+.lesson-icon p {
+  position: absolute;
+  top: 44%;
+  width: 100%;
+  color: white;
+}
+
+.text-contents {
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #b3aeb5;
+}
+
+.heading {
+  color: white;
+}
+
+.heading {
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.heading h1 {
+  font-size: 30px; /* Adjust as needed */
+}
+
+.heading h2 {
+  font-size: 20px; /* Smaller than h1 */
+}
+
+.heading {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+
+
+.message-wrapper {
+  border-top: 2px solid #eee;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+
+.message  {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  box-shadow: 0 7px #1a7940;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+footer img {
+  width: 125px;
+}
+
+.footer {
+  background-color: ;
+  color: black;
+  max-width: px;
+  margin: 0 auto;              /* ⬅️ centers the footer block */
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  border-radius: 30px;         /* optional: rounded corners for style */
+}
+
+.section {
+  min-height: 100vh; /* ensures full screen space */
+  position: relative;
+}
+
+ 
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.fade-up-on-load {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.3s; /* optional delay */
+}
+
+.lesson-wrapper {
+  padding-bottom: 150px;
+}
+
+
+.footer {
+  margin-top: px; /* push it away from above content */
+}
+
+
+
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .lessons {
+    background-size: cover;
+    background-position: top;
+  }
+}
+
+
+.video-preview-box {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 270px;
+  margin: 30px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.video-preview-box {
+  width: 100%;
+  height: 170px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  text-shadow: 0 0 10px black;
+  pointer-events: none;
+}
+
+.text-contents {
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.lesson {
+  text-align: center;
+}
